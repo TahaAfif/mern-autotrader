@@ -4,6 +4,12 @@ import cors from 'cors'
 import morgan from 'morgan'
 import dotenv from 'dotenv'
 import carsRouter from './routes/cars.js'
+import cors from 'cors';
+const allowed = process.env.NODE_ENV === 'production'
+  ? ['https://mern-autotrader.vercel.app']
+  : ['http://localhost:5173'];
+app.use(cors({ origin: allowed }));
+
 
 
 dotenv.config()
@@ -16,6 +22,7 @@ app.use(morgan('dev'))
 
 
 app.get('/api/ping', (_, res) => res.json({ ok: true, message: 'pong' }))
+app.get('/', (_, res) => res.send('AutoTrader API läuft 🚗'));
 app.use('/api/cars', carsRouter)
 
 
