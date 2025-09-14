@@ -1,0 +1,7 @@
+{
+  "name": "mern-autotrader",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n server,client -c green,cyan \"cd server && npm run dev\" \"cd client && npm run dev\""
+  }
+}
