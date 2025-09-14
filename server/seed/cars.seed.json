@@ -1,0 +1,56 @@
+[
+  {
+    "brand": "Volkswagen",
+    "model": "Golf",
+    "price": 9500,
+    "mileage": 120000,
+    "year": 2015,
+    "imageUrl": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf",
+    "description": "Gepflegter Golf, 2.0 TDI, scheckheftgepflegt."
+  },
+  {
+    "brand": "BMW",
+    "model": "320d",
+    "price": 14500,
+    "mileage": 98000,
+    "year": 2016,
+    "imageUrl": "https://images.unsplash.com/photo-1502877338535-766e1452684a",
+    "description": "Sportliche Limousine, M-Paket, Top-Zustand."
+  },
+  {
+    "brand": "Mercedes",
+    "model": "C200",
+    "price": 16900,
+    "mileage": 110000,
+    "year": 2017,
+    "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+    "description": "Komfortabel, Automatik, Navi."
+  },
+  {
+    "brand": "Audi",
+    "model": "A3",
+    "price": 11900,
+    "mileage": 130000,
+    "year": 2014,
+    "imageUrl": "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023",
+    "description": "A3 Sportback, S-Line, sehr gepflegt."
+  },
+  {
+    "brand": "Toyota",
+    "model": "Yaris",
+    "price": 6900,
+    "mileage": 90000,
+    "year": 2013,
+    "imageUrl": "https://images.unsplash.com/photo-1549924231-f129b911e442",
+    "description": "Sparsamer Stadtwagen, 1.33 VVT-i."
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "price": 27900,
+    "mileage": 75000,
+    "year": 2019,
+    "imageUrl": "https://images.unsplash.com/photo-1549923746-c502d488b3ea",
+    "description": "Elektrisch, Autopilot, Long Range."
+  }
+]
