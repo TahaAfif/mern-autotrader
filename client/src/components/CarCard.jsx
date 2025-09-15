@@ -1,17 +1,24 @@
 export default function CarCard({ car, onEdit, onDelete }) {
-return (
-<div className="card">
-{car.imageUrl && (
-<img src={car.imageUrl} alt={`${car.brand} ${car.model}`} style={{ width: '100%', borderRadius: 12, marginBottom: 8, objectFit: 'cover', aspectRatio: '4/3' }} />
-)}
-<h3 style={{ margin: '8px 0' }}>{car.brand} {car.model} ({car.year})</h3>
-<p style={{ margin: 0 }}>Preis: <b>{car.price.toLocaleString()} €</b></p>
-<p style={{ margin: '4px 0 8px' }}>Kilometer: {car.mileage.toLocaleString()} km</p>
-{car.description && <p style={{ opacity: .8 }}>{car.description}</p>}
-<div style={{ display: 'flex', gap: 8 }}>
-<button className="button secondary" onClick={() => onEdit(car)}>Bearbeiten</button>
-<button className="button" onClick={() => onDelete(car._id)}>Löschen</button>
-</div>
-</div>
-)
+  const km = new Intl.NumberFormat('ch-CH').format(car.mileage || 0)
+  const price = new Intl.NumberFormat('ch-CH').format(car.price || 0)
+
+  return (
+    <div className="card">
+      {car.imageUrl && (
+        <img className="car-img" src={car.imageUrl} alt={`${car.brand} ${car.model}`} />
+      )}
+      <div className="car-head">
+        <h3 style={{margin:0}}>{car.brand} {car.model} <span style={{color:'#9aa3af'}}>({car.year})</span></h3>
+        <span className="price">{price} CHF</span>
+      </div>
+      <div className="meta">
+        <span>🚦 {km} km</span>
+        {car.description ? <span title={car.description}>• {car.description.slice(0,40)}{car.description.length>40?'…':''}</span> : null}
+      </div>
+      <div className="actions">
+        <button className="button ghost" onClick={()=>onEdit(car)}>Bearbeiten</button>
+        <button className="button danger" onClick={()=>onDelete(car._id)}>Löschen</button>
+      </div>
+    </div>
+  )
 }
